@@ -1,0 +1,27 @@
+#! /usr/bin/python3
+
+import subprocess
+import sys
+
+
+try: 
+    sMode = sys.argv[1]
+except IndexError:
+    sys.exit("You must specify get or set!")
+
+try:
+    profileToSet = sys.argv[2]
+except IndexError:
+    pass
+
+
+def getPowerMode():
+    subprocess.run(["surface", "profile", "get"])
+
+if sMode == "get":
+    getPowerMode()
+elif sMode == "set":
+    subprocess.run(["surface", "profile", "set", str(profileToSet)])
+    #print(f'Mode changed to {profileToSet}')
+
+
