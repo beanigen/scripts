@@ -9,3 +9,6 @@ a python script for getting current i3wm keybind layer, automatically prints def
 
 ### surfacepower
 basically a python wrapper for https://github.com/linux-surface/surface-control to change platform profiles, use get to get current mode and set to set mode
+
+### surfaceutil
+another python wrapper for surface stuff, work in progress ~~sorta~~
