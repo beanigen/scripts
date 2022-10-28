@@ -59,5 +59,5 @@ elif arg1 == "setres":
 elif arg1 == "restoreres":
     subprocess.Popen([f'{command}', '--output', 'eDP-1', f'{modeSet}', config.get('config.nativeRes'), f'{rateSet}', f'{rate}'])
     print("Resolution restored")
-
-
+elif arg1 == "-h" or "--help":
+    print("list of commands \nprofilecheck - checks performance profile, requires surface-control\nsetres [resolution] - uses xrandr or wlr-randr to change resolution\nrestoreres - sets your resolution back to the one specified during first run")
